@@ -20,7 +20,7 @@
     <div class="topbar">
       <div class="topbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="index.html">CUFM - DANTA</a>
+          <a class="brand" href="/">CUFM - DANTA</a>
           <ul class="nav">
             <li class="active"><a href="../danta">Principal</a></li>
             <li><a href="#foro">Foro</a></li>
@@ -43,7 +43,7 @@
 		        <ul>
 		          <li><a href="#">Ayuda</a></li>
 		          <li><a href="#">Foro</a></li>
-		          <li><a href="direccion.html">Dirección CUFM</a></li>
+		          <li><a href="#">Dirección CUFM</a></li>
 		        </ul>
 		        <h5>Consulta General</h5>
 		        <ul>
@@ -53,9 +53,8 @@
 		        </ul>
 		        <h5>Registro</h5>
 		        <ul>
-		          <li><a href="registrou.html">Usuario</a></li>
-		          <li><a href="#">Estudiante</a></li>
-		          <li><a href="#">Profesor</a></li>
+		          <li><%= link_to "Registrar", :controller => "users", :action => "new" %></li>
+		          
 		        </ul>
 		      </div>
 		    </div>
