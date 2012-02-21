@@ -12,46 +12,53 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label "Nombres" %><br />
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label "Apellidos" %><br />
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :id_number %><br />
+    <%= f.label "Numero de Cedula" %><br />
     <%= f.text_field :id_number %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label "Correo Electronico" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :phone_home %><br />
+    <%= f.label "Telefono de Casa" %><br />
     <%= f.text_field :phone_home %>
   </div>
   <div class="field">
-    <%= f.label :phone_mobile %><br />
+    <%= f.label "Telefono Mobil" %><br />
     <%= f.text_field :phone_mobile %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
+	   <%=f.label "Genero"%><br />
+  	   <%=f.label :Hombre %>
+  	   <%=radio_button(:user, :gender, :hombre, :checked => true) %>
+  	   <br />
+  	   <%=f.label :Mujer %>
+  	   <%=radio_button(:user, :gender, :mujer)  %>
   </div>
+  
   <div class="field">
-    <%= f.label :address %><br />
+    <%= f.label "Dirección" %><br />
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label "Contraseña" %><br />
     <%= f.text_field :password %>
   </div>
   <div class="field">
-    <%= f.label :role %><br />
+    <%= f.label "Rol"%><br />
     <%= f.text_field :role %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
