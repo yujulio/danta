@@ -1,17 +1,8 @@
 <%= form_for(@user) do |f| %>
 
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> corrija para continuar su registro:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= f.error_messages :header_message => "Registro Invalido!",
+   		:message => "Necesitas arreglar los siguientes campos",
+   		:header_tag => :h3 %>
 
   <div class="field">
     <%= f.label "Nombres" %><br />
@@ -28,6 +19,7 @@
   <div class="field">
     <%= f.label "Correo Electronico" %><br />
     <%= f.text_field :email %>
+    <%= f.label "Confirmar Correo Electronico" %>
     <%= f.text_field :email_confirmation %>
   </div>
   <div class="field">
@@ -54,6 +46,7 @@
   <div class="field">
     <%= f.label "Contraseña" %><br />
     <%= f.password_field :password %>
+    <%= f.label "Confirmar Contraseña" %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
@@ -61,7 +54,7 @@
     <%= f.text_field :role %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => "Crear Cuenta" %>
   </div>
 <% end %>
 
