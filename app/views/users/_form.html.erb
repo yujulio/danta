@@ -1,7 +1,8 @@
 <%= form_for(@user) do |f| %>
+
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> corrija para continuar su registro:</h2>
 
       <ul>
       <% @user.errors.full_messages.each do |msg| %>
@@ -10,6 +11,7 @@
       </ul>
     </div>
   <% end %>
+
 
   <div class="field">
     <%= f.label "Nombres" %><br />
@@ -26,19 +28,20 @@
   <div class="field">
     <%= f.label "Correo Electronico" %><br />
     <%= f.text_field :email %>
+    <%= f.text_field :email_confirmation %>
   </div>
   <div class="field">
     <%= f.label "Telefono de Casa" %><br />
-    <%= f.text_field :phone_home %>
+    <%= f.phone_field :phone_home %>
   </div>
   <div class="field">
     <%= f.label "Telefono Mobil" %><br />
-    <%= f.text_field :phone_mobile %>
+    <%= f.phone_field :phone_mobile %>
   </div>
   <div class="field">
 	   <%=f.label "Genero"%><br />
   	   <%=f.label :Hombre %>
-  	   <%=radio_button(:user, :gender, :hombre, :checked => true) %>
+  	   <%=radio_button(:user, :gender, :hombre) %>
   	   <br />
   	   <%=f.label :Mujer %>
   	   <%=radio_button(:user, :gender, :mujer)  %>
@@ -50,7 +53,8 @@
   </div>
   <div class="field">
     <%= f.label "Contraseña" %><br />
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
     <%= f.label "Rol"%><br />
