@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: danta_development
   pool: 5
-  username: railsdb
+  username: postgres
   password: '12345'
   host: localhost
   port: 5432
@@ -45,7 +45,7 @@ test:
   encoding: unicode
   database: danta_test
   pool: 5
-  username: railsdb
+  username: postgres
   password: '12345'
   host: localhost
   port: 5432
@@ -54,7 +54,7 @@ production:
   encoding: unicode
   database: danta_production
   pool: 5
-  username: railsdb
+  username: postgres
   password: '12345'
   host: localhost
   port: 5432
