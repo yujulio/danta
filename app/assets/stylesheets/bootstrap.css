@@ -1359,7 +1359,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   font-size: normal;
   font-weight: 13px;
   line-height: 1;
-	height: 28px;
+	/*height: 28px;*/
   padding: 4px 9px;
   color: #ffffff;
   color: rgba(255, 255, 255, 0.75);
