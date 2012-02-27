@@ -1,109 +1,109 @@
-<div class="span10">
-  <form>
-    <fieldset>
-      <%= form_for(@user) do |f| %>
+<%= form_for(@user) do |f| %>
 
-      <%= f.error_messages :header_message => "Registro Invalido!",
-       		:message => "Necesitas arreglar los siguientes campos",
-       		:header_tag => :h3 %>
-
-      <div class="clearfix">
-        <%= f.label "Nombres" %> 
-        <div class="input">
-          <%= f.text_field :first_name %>
+<%= f.error_messages :header_message => "Registro Invalido!",
+ 		:message => "Necesitas arreglar los siguientes campos",
+ 		:header_tag => :h3 %>
+  <div class="span10">
+    <form>
+      <fieldset>
+        <div class="clearfix">
+          <%= f.label "Nombres" %> 
+          <div class="input">
+            <%= f.text_field :first_name %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Apellidos" %>
-        <div class="input">
-          <%= f.text_field :last_name %>
+        <div class="clearfix">
+          <%= f.label "Apellidos" %>
+          <div class="input">
+            <%= f.text_field :last_name %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Número de Cédula" %>
-        <div class="input">
-          <%= f.text_field :id_number %>
+        <div class="clearfix">
+          <%= f.label "Número de Cédula" %>
+          <div class="input">
+            <%= f.text_field :id_number %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Correo Electrónico" %>
-        <div class="input">
-          <%= f.text_field :email %>
+        <div class="clearfix">
+          <%= f.label "Correo Electrónico" %>
+          <div class="input">
+            <%= f.text_field :email %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Confirmar Correo Electrónico" %>
-        <div class="input">
-          <%= f.text_field :email_confirmation %>
+        <div class="clearfix">
+          <%= f.label "Confirmar Correo Electrónico" %>
+          <div class="input">
+            <%= f.text_field :email_confirmation %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Teléfono de Casa" %>
-        <div class="input">
-          <%= f.phone_field :phone_home %>
+        <div class="clearfix">
+          <%= f.label "Teléfono de Casa" %>
+          <div class="input">
+            <%= f.phone_field :phone_home %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Teléfono Móvil" %>
-        <div class="input">
-          <%= f.phone_field :phone_mobile %>
+        <div class="clearfix">
+          <%= f.label "Teléfono Móvil" %>
+          <div class="input">
+            <%= f.phone_field :phone_mobile %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%=f.label "Género"%>
-        <div class="input">
-          <ul class="input-list">
-            <li>
-              <%=radio_button(:user, :gender, :hombre) %>
-              <%=f.label :Hombre %>              
-            </li>
-            <li>
-              <%=radio_button(:user, :gender, :mujer)  %>
-              <%=f.label :Mujer %>              
-            </li>
-          </ul>
+        <div class="clearfix">
+          <%=f.label "Género"%>
+          <div class="input">
+            <ul class="input-list">
+              <li>
+                <%=radio_button(:user, :gender, :hombre) %>
+                <%=f.label :Hombre %>              
+              </li>
+              <li>
+                <%=radio_button(:user, :gender, :mujer)  %>
+                <%=f.label :Mujer %>              
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      
-      <div class="clearfix">
-        <%= f.label "Dirección" %>
-        <div class="input">
-          <%= f.text_area :address, :size=> "10x4" %>
+        
+        <div class="clearfix">
+          <%= f.label "Dirección" %>
+          <div class="input">
+            <%= f.text_area :address, :size=> "10x4" %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Contraseña" %>
-        <div class="input">
-          <%= f.password_field :password %>
+        <div class="clearfix">
+          <%= f.label "Contraseña" %>
+          <div class="input">
+            <%= f.password_field :password %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Confirmar Contraseña" %>
-        <div class="input">
-          <%= f.password_field :password_confirmation %>
+        <div class="clearfix">
+          <%= f.label "Confirmar Contraseña" %>
+          <div class="input">
+            <%= f.password_field :password_confirmation %>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix">
-        <%= f.label "Rol"%>
-        <div class="input">
-          <%= f.text_field :role %>
+        <div class="clearfix">
+          <%= f.label "Rol"%>
+          <div class="input">
+            <%= f.text_field :role %>
+          </div>
         </div>
-      </div>
 
-      <div class="actions">
-        <%= f.submit :value => "Crear Cuenta" %>
-      </div>
-      <% end %>
-    </fieldset>
-  </form>
-</div>
+        <div class="actions">
+          <%= f.submit :value => "Crear Cuenta" %>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+<% end %>
