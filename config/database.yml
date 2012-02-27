@@ -17,8 +17,8 @@ development:
   encoding: unicode
   database: danta_development
   pool: 5
-  username: postgres
-  password: '12345'
+  username: danta
+  password: 'danta'
   host: localhost
   port: 5432
 
@@ -45,8 +45,8 @@ test:
   encoding: unicode
   database: danta_test
   pool: 5
-  username: postgres
-  password: '12345'
+  username: danta
+  password: 'danta'
   host: localhost
   port: 5432
 production:
@@ -54,7 +54,7 @@ production:
   encoding: unicode
   database: danta_production
   pool: 5
-  username: postgres
-  password: '12345'
+  username: danta
+  password: 'danta'
   host: localhost
   port: 5432
