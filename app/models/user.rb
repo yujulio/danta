@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   validates :password, :confirmation => {:message => "^Hay un error en la confirmacion de la Contrasena"}
   validates :password, :length => { :in => 6..20, :message => "^La Contrasena es muy corta minimo 6 caracteres"}
   validates :password_confirmation, :presence => {:message => "^Confirma tu Contrasena." }
+
+  has_secure_password
   
   
 end
