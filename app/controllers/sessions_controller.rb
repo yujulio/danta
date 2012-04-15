@@ -15,6 +15,6 @@ class SessionsController < ApplicationController
 
   def destroy
   	session[:user_id] = nil
-  	redirect_to store_url, notice: "Se ha deslogeado"
+  	redirect_to home_url, notice: "Se ha deslogeado"
   end
 end
