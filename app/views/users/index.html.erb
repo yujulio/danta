@@ -1,17 +1,16 @@
-<h1>Listing users</h1>
+<h1>Listado de usuarios</h1>
 
 <table>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Id number</th>
-    <th>Email</th>
-    <th>Phone home</th>
-    <th>Phone mobile</th>
-    <th>Gender</th>
-    <th>Address</th>
-    <th>Password</th>
-    <th>Role</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>N° de Cédula</th>
+    <th>Correo</th>
+    <th>Teléfono local</th>
+    <th>Teléfono celular</th>
+    <th>Género</th>
+    <th>Dirección</th>
+    <th>Rol</th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,15 +26,14 @@
     <td><%= user.phone_mobile %></td>
     <td><%= user.gender %></td>
     <td><%= user.address %></td>
-    <td><%= user.password %></td>
     <td><%= user.role %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm:'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Mostrar', user %></td>
+    <td><%= link_to 'Editar', edit_user_path(user) %></td>
+    <td><%= link_to 'Borrar', user, confirm:'¿Ésta seguro?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'Nuevo usuario', new_user_path %>

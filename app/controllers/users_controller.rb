@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+
+  skip_before_filter :authorize, only: [:create, :new]
+
   def index
     @users = User.all
 
@@ -44,7 +47,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: 'El usuario fue creado exitosamente' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
@@ -73,7 +76,13 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
+    begin
+      @user.destroy
+      flash[:notice] = "Usuario #{@user.name} borrado"
+    rescue Exception => e
+      flash[:notice] = e.message
+    end
+    
 
     respond_to do |format|
       format.html { redirect_to users_url }

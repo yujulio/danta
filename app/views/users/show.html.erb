@@ -1,55 +1,50 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>First name:</b>
+  <b>Nombre:</b>
   <%= @user.first_name %>
 </p>
 
 <p>
-  <b>Last name:</b>
+  <b>Apellido:</b>
   <%= @user.last_name %>
 </p>
 
 <p>
-  <b>Id number:</b>
+  <b>Número de cédula:</b>
   <%= @user.id_number %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b>Correo electrónico:</b>
   <%= @user.email %>
 </p>
 
 <p>
-  <b>Phone home:</b>
+  <b>Teléfono local:</b>
   <%= @user.phone_home %>
 </p>
 
 <p>
-  <b>Phone mobile:</b>
+  <b>Teléfono celular:</b>
   <%= @user.phone_mobile %>
 </p>
 
 <p>
-  <b>Gender:</b>
+  <b>Género:</b>
   <%= @user.gender %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b>Dirección:</b>
   <%= @user.address %>
 </p>
 
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
-
-<p>
-  <b>Role:</b>
+  <b>Rol:</b>
   <%= @user.role %>
 </p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Editar', edit_user_path(@user) %> |
+<%= link_to 'Volver', users_path %>

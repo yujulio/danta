@@ -13,6 +13,15 @@ class User < ActiveRecord::Base
   validates :password, :confirmation => {:message => "^Hay un error en la confirmacion de la Contrasena"}
   validates :password, :length => { :in => 6..20, :message => "^La Contrasena es muy corta minimo 6 caracteres"}
   validates :password_confirmation, :presence => {:message => "^Confirma tu Contrasena." }
-  
+  has_secure_password
+
+  after_destroy :ensure_an_admin_remains
+
+  private
+    def ensure_an_admin_remains
+      if User.count.zero?
+        raise "Can't delete last user"
+      end  
+    end  
   
 end

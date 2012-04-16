@@ -22,15 +22,15 @@
         <div class="container-fluid">
           <a class="brand" href="/">CUFM - DANTA</a>
           <ul class="nav">
-            <li class="active"><a href="../danta">Principal</a></li>
+            <li class="active"><a href="/">Principal</a></li>
             <li><a href="#foro">Foro</a></li>
-            <li><a href="direccion.html">Dirección CUFM</a></li>
+            <li><a href="#direccion">Dirección CUFM</a></li>
           </ul>
-          <form action="" class="pull-right">
+          <!--  <form action="" class="pull-right">
             <input class="input-small" type="text" placeholder="Usuario">
             <input class="input-small" type="password" placeholder="Contraseña">
             <a href="nota.html" class="btn" type="submit">Entrar</a>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>
@@ -54,7 +54,16 @@
 		        <h5>Registro</h5>
 		        <ul>
 		          <li><%= link_to "Registrar", :controller => "users", :action => "new" %></li>
-		          
+              
+              <% if session[:user_id] == nil %>
+                <li><a href="../login"> Login</a></li>
+              <% end %>
+
+              <% if session[:user_id] %>
+                <li><%= link_to 'Usuarios', users_path %></li>
+                <%= button_to 'Logout', logout_path, method: :delete %>
+              <% end %>
+
 		        </ul>
 		      </div>
 		    </div>
